@@ -32,11 +32,10 @@ function addTask(text) {
 
     todoList.append(todo);
 }
-
 document.addEventListener('DOMContentLoaded', function() {
-    const todoList = document.querySelector('#todoList');
-    const todoForm = document.querySelector('#todoForm');
-    const todoSearch = document.querySelector('#todoSearch');
+    todoList = document.querySelector('#todoList');
+    todoForm = document.querySelector('#todoForm');
+    todoSearch = document.querySelector('#todoSearch');
 
     todoForm.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -46,7 +45,23 @@ document.addEventListener('DOMContentLoaded', function() {
             textarea.value = '';
         }
     });
-    if (e.target.closest('.todo-element-delete') !== null) {
-        e.target.closest('.todo-element').remove();
-    }
+
+    todoList.addEventListener('click', function(e) {
+        if (e.target.closest('.todo-element-delete') !== null) {
+            e.target.closest('.todo-element').remove();
+        }
+    });
+
+    todoSearch.addEventListener('input', function() {
+        const val = this.value;
+        const elems = todoList.querySelectorAll('.todo-element');
+        [].forEach.call(elems, function(el) {
+            const text = el.querySelector('.todo-element-text').innerText;
+            if (text.indexOf(val) !== -1) {
+                el.style.setProperty('display', '');
+            } else {
+                el.style.setProperty('display', 'none');
+            }
+        });
+    });
 });
