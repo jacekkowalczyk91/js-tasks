@@ -20,7 +20,7 @@
 /*slider*/
 .slider {
     position: relative;
-    background: url(slide-bg1.jpeg);
+    background: url(photo.jpeg);
     background-size: cover;
     background-position: center center;
 }
@@ -45,4 +45,32 @@
 }
 .slider-slide-active {
     z-index: 1;
+}
+/*slider element*/
+.slider .element-title {
+    color:#fff;
+    font-family: sans-serif;
+    position: relative;
+    left:-3rem;
+    opacity:0;
+    font-size:6rem;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-top:0;
+    text-align: center;
+    font-family: sans-serif;
+}
+.slider .element-text {
+    color:#fff;
+    position: relative;
+    left:-3rem;
+    opacity:0;
+    font-size:1.5rem;
+    color:rgba(255,255,255,.6);
+    padding-left:4rem;
+    padding-right:4rem;
+    text-align: center;
+    font-family: serif;
+    font-style: italic;
+    max-width:60%;
 }
