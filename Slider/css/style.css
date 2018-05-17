@@ -20,7 +20,7 @@
 /*slider*/
 .slider {
     position: relative;
-    background: url(photo.jpeg);
+    background-image: url('photo.jpeg');
     background-size: cover;
     background-position: center center;
 }
@@ -58,7 +58,6 @@
     font-weight: normal;
     margin-top:0;
     text-align: center;
-    font-family: sans-serif;
 }
 .slider .element-text {
     color:#fff;
