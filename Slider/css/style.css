@@ -1,3 +1,6 @@
+body {
+    background: url("photo.jpeg") no-repeat;
+}
 .slide {
     opacity: 0;
     z-index: 0;
