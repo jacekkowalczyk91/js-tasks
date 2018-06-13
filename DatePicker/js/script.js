@@ -21,5 +21,10 @@ function Calendar = function() {
         this.divTable = document.createElement('div');
         this.divTable.className = 'calendar-table-cnt';
         this.divCnt.appendChild(this.divTable);
+
+        this.calendarWrapper = document.createElement('div');
+        this.calendarWrapper.classList.add('input-calendar-cnt');
+        this.input.parentElement.insertBefore(this.calendarWrapper, this.input);
+        this.calendarWrapper.appendChild(this.input);
     };
 };
